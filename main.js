@@ -39,6 +39,7 @@ const agregar_lista = () =>{
     textoA.value="";
     numsIDS++
     editIDS++
+    textoValor=""
 }
 
 
