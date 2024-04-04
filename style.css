@@ -1,69 +1,8 @@
-*{
-    font-family: Roboto;
-}
-
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-#texto{
-    text-decoration: none;
-    border: none;
-    resize: none;
-    background-color: rgb(240, 240, 240);
-    position: absolute;
-    top: 20%;
-    font-size: 20px;
-    margin: 0px;
-    height: 25px;
-    border-radius: 10px;
-    border: 1px  solid  rgb(170, 170, 170);
-}
-
 #agregar{
-    position: absolute;
-    top: 185px;
-    right: 610px;
-    margin: 0px;
-    height: 40px;
-    font-size: 20px;
-}
-
-#eliminar{
-    position: absolute;
-    top: 185px;
-    right: 670px;
-    margin: 0px;
-    height: 40px;
-    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #editar_btn{
-    font-size: 20px;
-    height: 35px;
-    width: 39px;
-    margin-left: 20px;
-}
-
-#titulo{
-    margin: 30px 0px 0px 0px;
-    font-size: 90px;
-    font-family: roboto;
-    font-weight: 500;
-}
-
-#listaP{
-    height: 650px;
-    width: 1920px;
-    position: absolute;
-    bottom: 0px;
-}
-
-.listado{
-    font-family: Roboto;
-    font-size: 60px;
-    border: 2px solid black;
+    margin-right: 20px;
 }

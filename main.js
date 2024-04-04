@@ -25,12 +25,14 @@ const agregar_lista = () =>{
     const creandoE = document.createElement('h2');
     listaPendientes.appendChild(creandoE);
     eEbtn.id="editar_btn";
+    eEbtn.className ="btn btn-warning"
     eEbtn.addEventListener('click', editar_lista)
     eEbtn.innerHTML = '🔀';
     creandoE.innerHTML = textoValor;
     creandoE.className = "listado"
     creandoE.id = `tarea_num_${numsIDS}`
     eEbtn.id = `edit_btn${editIDS}`
+    eEbtn.style.marginLeft='10px'
     creandoE.style.backgroundColor= colores[numeroN]
     creandoE.appendChild(eEbtn)
     console.log(list);
@@ -39,7 +41,6 @@ const agregar_lista = () =>{
     textoA.value="";
     numsIDS++
     editIDS++
-    textoValor=""
 }
 
 
@@ -50,6 +51,8 @@ const añadirBtn = (creandoE) =>{
   eEbtn.addEventListener('click', editar_lista)
   eEbtn.innerHTML = '🔀';
   creandoE.appendChild(eEbtn)
+  eEbtn.className ="btn btn-warning"
+  eEbtn.style.marginLeft='10px'
   eEbtn.addEventListener('click', () => editar_lista(eEbtn));
 }
 
