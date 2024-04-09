@@ -18,6 +18,13 @@ textoA.addEventListener("change", () => {
   // Procesamos el nuevo valor del input
 });
 
+const prueba = () =>{
+  swal({
+    title: "Cambio hecho",
+    icon: "success",
+  });
+}
+
 const agregar_lista = () =>{
     let numeroN = Math.floor(Math.random() * colores.length);
     list.push(textoValor)
@@ -26,7 +33,7 @@ const agregar_lista = () =>{
     listaPendientes.appendChild(creandoE);
     eEbtn.id="editar_btn";
     eEbtn.className ="btn btn-warning"
-    eEbtn.addEventListener('click', editar_lista)
+    eEbtn.addEventListener('click', editarLista)
     eEbtn.innerHTML = '🔀';
     creandoE.innerHTML = textoValor;
     creandoE.className = "listado"
@@ -36,7 +43,7 @@ const agregar_lista = () =>{
     creandoE.style.backgroundColor= colores[numeroN]
     creandoE.appendChild(eEbtn)
     console.log(list);
-    eEbtn.addEventListener('click', () => editar_lista(eEbtn));
+    eEbtn.addEventListener('click', () => editarLista(eEbtn));
     creandoE.addEventListener('click', () => añadirBtn(creandoE));
     textoA.value="";
     numsIDS++
@@ -48,18 +55,24 @@ const agregar_lista = () =>{
 const añadirBtn = (creandoE) =>{
   const eEbtn = document.createElement('button');
   eEbtn.id="editar_btn";
-  eEbtn.addEventListener('click', editar_lista)
+  eEbtn.addEventListener('click', editarLista)
   eEbtn.innerHTML = '🔀';
   creandoE.appendChild(eEbtn)
   eEbtn.className ="btn btn-warning"
   eEbtn.style.marginLeft='10px'
-  eEbtn.addEventListener('click', () => editar_lista(eEbtn));
+  eEbtn.addEventListener('click', () => editarLista(eEbtn));
 }
 
-const editar_lista = (boton) => {
-  Nvalor = boton.parentElement.innerText = textoValor;
-  añadirBtn()
- }
+
+const editarLista = (botonEdit) => {
+  const idTarea = botonEdit.parentNode.id;
+  const tarea = document.getElementById(idTarea);
+  const nuevoTexto = prompt('Introduce el cambio');
+  tarea.innerText = nuevoTexto;
+
+  prueba();
+};
+
  
 const eliminar_lista = () => {
   list.pop();
